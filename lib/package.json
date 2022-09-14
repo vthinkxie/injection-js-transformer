@@ -1,0 +1,23 @@
+{
+  "name": "injection-js-transformer",
+  "version": "0.0.2",
+  "description": "injection-js typescript transformer",
+  "main": "dist/injection-js-transfomer.umd.js",
+  "module": "dist/injection-js-transfomer.es5.js",
+  "typings": "dist/types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vthinkxie/injection-js-transformer.git"
+  },
+  "keywords": [
+    "DI",
+    "dependency",
+    "injection",
+    "dependency injection",
+    "injector",
+    "typescript",
+    "transformer"
+  ],
+  "author": "yadongxie",
+  "license": "MIT"
+}
