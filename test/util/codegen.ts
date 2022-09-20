@@ -3,7 +3,7 @@ import injectionTransformer from "../../src";
 import { resolve } from "path";
 
 export function codeGenerator(path: string): string {
-  const filename = resolve(__dirname, `../fixture/${path}`);
+  const filename = resolve(__dirname, `../${path}`);
   const program = ts.createProgram([filename], {});
   const sourceFile = program.getSourceFile(filename)!;
   const transformer = injectionTransformer(program);

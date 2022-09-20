@@ -1,5 +1,4 @@
 import { OutputExpression } from "../decorators/expression";
-import { DependencyMetadata } from "../decorators/factory";
 import ts from "typescript";
 
 export interface CompilationResult {
