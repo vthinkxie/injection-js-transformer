@@ -6,6 +6,7 @@ import { TypeScriptReflectionHost } from "../reflection/typescript";
 import { Identifiers } from "../util/identifiers";
 import { ClassCompilationMap, ImportDeclarationSet } from "./type";
 import { tryGetModifiers } from "../util/modifiers";
+import { tryGetDecorators } from "../util/decorators";
 
 const NO_DECORATORS = new Set<ts.Decorator>();
 
@@ -170,9 +171,7 @@ export class TransformationVisitor extends Visitor {
   private nonTargetDecoratorsOnly(
     node: ts.Declaration
   ): readonly Decorator[] | undefined {
-    const decorators = ts.canHaveDecorators(node)
-      ? ts.getDecorators(node)
-      : undefined;
+    const decorators = tryGetDecorators(node);
     // Shortcut if the node has no decorators.
     if (decorators === undefined) {
       return undefined;

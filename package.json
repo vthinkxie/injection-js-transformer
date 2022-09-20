@@ -3,10 +3,9 @@
   "description": "injection-js typescript transformer",
   "scripts": {
     "test": "jest",
-    "webpack": "webpack",
     "prebuild": "rimraf lib/dist",
     "integration": "npm run build && TS_NODE_PROJECT=tsconfig.json ts-node integration/webpack.ts",
-    "build": "tsc --build tsconfig.lib.build.json && rollup -c rollup.config.ts && rimraf out-tsc"
+    "build": "tsc --build tsconfig.lib.build.json && rollup -c rollup.config.ts && rimraf out-tsc && cp README.md ./lib"
   },
   "keywords": [
     "typescript",

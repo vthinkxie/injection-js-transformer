@@ -3,6 +3,7 @@
 # compiled output
 /dist
 /lib/dist
+/lib/README.md
 /integration-test/dist
 /tmp
 /out-tsc

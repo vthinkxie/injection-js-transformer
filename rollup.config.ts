@@ -9,7 +9,7 @@ export default {
   output: [
     {
       file: `./lib/${pkg.main}`,
-      sourcemap: true,
+      sourcemap: false,
       name: "injectionJsTransformer",
       format: "umd",
       globals: {
@@ -18,7 +18,7 @@ export default {
     },
     {
       file: `./lib/${pkg.module}`,
-      sourcemap: true,
+      sourcemap: false,
       format: "es",
       globals: {
         typescript: "ts",

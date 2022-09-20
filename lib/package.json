@@ -1,6 +1,6 @@
 {
   "name": "injection-js-transformer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "injection-js typescript transformer",
   "main": "dist/injection-js-transfomer.umd.js",
   "module": "dist/injection-js-transfomer.es5.js",

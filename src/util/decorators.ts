@@ -3,7 +3,10 @@ import ts from "typescript";
 export function tryGetDecorators(
   node: ts.Node
 ): readonly ts.Decorator[] | undefined {
-  if (typeof ts.getDecorators === "function") {
+  if (
+    typeof ts.getDecorators === "function" &&
+    typeof ts.canHaveDecorators === "function"
+  ) {
     // TS 4.8 and later
     return ts.canHaveDecorators(node) ? ts.getDecorators(node) : undefined;
   }
